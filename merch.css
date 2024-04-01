@@ -1,0 +1,375 @@
+/* ======Google FONTS======*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+
+/* ======CSS VARIABLES======*/
+
+:root{
+  --white-color: #fff;
+   --dakr-color:#222 ;
+   --body-bg-color: #fff;
+   --section-bg-color: #202834;
+  --navigation-item-hover-color: #3b5378;
+
+
+   --text-shadow: 0 5px 25px rgba(0,0,0,0.1);
+   --box-shadow: 0 5px 25px rgba(0 0 0 / 20%);
+
+   --scroll-bar-color: #fff;
+   --scroll-thumb-color:#282f4e;
+   --scroll-thumb-hover-color: #454f6b;
+ }
+
+
+/* ======Scroll bar======*/
+
+::-webkit-scrollbar{
+   width: 11px;
+   background: var(--scroll-bar-color);
+ }
+
+::-webkit-scrollbar-thumb{
+   width: 100%;
+   background: var(--scroll-thumb-color);
+   border-radius: 2em;
+ }
+
+::-webkit-scrollbar-thumb:hover{
+   background: var(--scroll-thumb-hover-color);}
+
+/* ======main CSS======*/
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box ;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color:solid white;
+}
+
+/*=====navbar===*/
+.navbar {
+  background:  linear-gradient(45deg , hsl(0, 0%, 2%),hsl(0, 0%, 25%),hsl(308, 19%, 84%));
+  color: rgb(17, 16, 16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
+
+.navbar-logo {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-style: italic;
+  word-spacing: 2px;
+  color: rgb(7, 255, 255);
+  text-decoration:underline ;
+  padding-left: 50px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-links li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-links li a:hover {
+  color: #e91e63;
+  text-decoration: none;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  .navbar-toggle {
+      display: block;
+  }
+}
+
+
+.image-container {
+    position: relative;
+    padding:0;
+    margin:0;
+}
+
+.image-container .collection {
+    width: 100%;
+    color: #535354af;
+}
+
+.image-container .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.image-container .overlay h1 {
+    font-family:'Poppins', sans-serif ;
+    font-weight: 800;
+    font-size: 5rem;
+    color: rgb(139, 38, 38);
+    text-transform:var(--text-shadow) ;    
+}
+
+.image-container .overlay p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color:hsl(0, 0%, 100%) ;
+    margin:0;
+    text-decoration: underline;
+}
+.section-p1{
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  margin:0;
+  background:#535354af;
+  
+}
+
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between ;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#product1 .pro{
+    width:30%;
+    min-width: 250px;
+    padding: 15px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    margin:20px 10px;
+    transition: 0.30s ease;
+    cursor: pointer;
+    border-radius: 15px;
+    position: relative;
+    background-color: #1a1a1a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition properties */
+
+}
+#product1 .pro:hover {
+    transform: scale(1.05); /* Increase the size on hover to create the pop-out effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* Adjust box shadow on hover for a pop-out effect */
+}
+
+#product1 .pro:hover img {
+    opacity: 0.8; /* Reduce the image opacity on hover */
+}
+
+
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+    background-color:cadetblue;
+    transform: scale(1);
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for opacity */
+}
+#product1 .pro:hover img {
+    transform: scale(1.1); /* Increase the scale on hover */
+    opacity: 0.8; /* Reduce the image opacity on hover */
+    z-index: 1; /* Ensure the image stays on top when scaled */
+}
+#product1 .pro .des{
+    text-align: start;
+    padding:10px 0;
+}
+#product1 .pro .des span{
+    color: white;
+    font-size: 12px;
+    font-family: 'Pangolin', cursive;
+
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: white;
+    font-size: 14px;;
+    font-family: 'Pangolin', cursive;
+}
+
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+    font-family: 'Pangolin', cursive;
+}
+
+
+.button{
+    align-items: center;
+    position: relative;
+    padding: 18px 18px;
+    color: coral;
+    border-radius: 15px;
+    font-weight: 900;
+    font-family: 'Pangolin', cursive;
+    border: 1px solid coral;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+.button:hover {
+    background-color: coral; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add a box-shadow on hover */
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+  }
+  
+  .row{
+    display: flex;
+    flex-wrap: wrap ;
+  }
+
+  .footer-ul{
+   list-style: none;
+  }
+
+  .footer {
+    background-color: #24262b;
+    padding: 70px 0; 
+  }
+
+  .footer-col{
+    width: 25%;
+    padding: 0 15px;
+  }
+
+  .footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+  }
+
+  .footer-col h4::before{
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+
+  .footer-col .footer-ul li:not(:last-child){
+    margin-bottom: 10px ;
+  }
+  
+  .footer-col .footer-ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color:#ffffff ;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+
+  }
+  .footer-col .footer-ul li a:hover{
+    color: #ffffff;
+    padding-left:8px ;
+  }
+
+  .footer-col .media-links img:hover{
+    transform: scale(1.5);
+  }
+
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    background-color: rgba(255,255,255,0.1);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  @media (max-width:560px) {
+    .v-stretch{
+        grid-row: span 1;
+    }
+
+    .h-stretch{
+        grid-column: span 1;
+    }
+
+    .big-stretch{
+        grid-row: span 1 ;
+        grid-column: span 1;   
+    }
+}
+@media screen and (max-width: 785px)
+{
+.footer-col{
+    width: 50%;
+    margin-bottom: 30px ;
+  }
+}
+@media screen and (max-width:574px)
+{
+  .footer-col{
+    width: 100%;
+  }
+}

@@ -1,0 +1,15 @@
+.slider {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  
